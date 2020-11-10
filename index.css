@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pocetna{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(pocetna.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.navbar{
+    display:flex;
+    padding: 40px 120px;
+}
+
+.navlogo img{
+    width: 135px;
+}
+
+.navlinks{
+    flex: 1;
+}
+
+.navlinks ul{
+    margin-left: 50px;
+    display: inline;
+    float: right;
+}
+
+.navlinks ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 25px;
+}
+
+.navlinks ul a{
+    color: #FF8C00;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navlinks ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background:  #FF8C00;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+
+.navlinks ul li:hover::after{
+    width: 100%;
+}
+
+
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #FF8C00;
+}
+
+.content h1{
+    font-size: 40px;
+    margin-top: 80px;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 200;
+    line-height: 25px;    
+}
+
+button{
+    color: #fff;
+    cursor: pointer;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    border: 3px solid #FF8C00;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+}
+
+span{
+    background: #FF8C00;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+
+
+.navbar .fa{
+    display: none;
+}
+
+@media (max-width: 700px){
+   
+    .navbar{
+        padding: 10px 20px;
+    }
+    .fa-bars{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .navbar .fa{
+        display: block;
+        color: #fff;
+        margin: 10px 25px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .navlinks {
+        height: 100vh;
+        width: 200px;
+        background: #000;
+        top: 0;
+        right: -200px;
+        position: absolute;
+        text-align: left;
+        z-index: 2;
+    }
+    .navlinks ul a{
+        display: block;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
